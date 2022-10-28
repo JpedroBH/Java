@@ -58,6 +58,13 @@ public class Estrutura_condicional {
 		System.out.println("6th bit is false");
 		}
 		
+		//Escopo: Tomar cuidado ao acessar variáveis de fora do escopo 
+		//if (2 > 1) {
+		//	String escopo = "teste"; teste só pode ser acessado aqui dentro
+		//}
+		//System.out.println(escopo);
+		
+		
 	}
 	
 	public void Estrutra_switch() {

@@ -22,6 +22,7 @@ public class Estrutura_sequencial {
 		String nome = "Jp";
 		int idade = 19;
 		double renda = 4000.0;
+		System.out.println("Olá mundo!"); //Atalho: "Sysout" + Ctrl + Espaço 
 		System.out.println("Bom dia! " + nome + " sua idade é " + idade);
 		System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda);
 		

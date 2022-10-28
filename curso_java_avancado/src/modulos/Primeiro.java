@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Calculator;
-import entities.Product;
+import entities.Employee;
 import entities.Triangle;
 
 public class Primeiro {
@@ -13,7 +13,7 @@ public class Primeiro {
 		// TODO Auto-generated method stub
 		
 		Primeiro Obj = new Primeiro();
-		Obj.Triangulo();
+		Obj.Funcionario();
 
 	}
 	
@@ -47,46 +47,39 @@ public class Primeiro {
 		
 	}
 	
-	public void Produto() {
+	public void Funcionario() {
 		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Product product = new Product();
+		System.out.println("Enter the employer data: ");
+		Employee emp = new Employee();
 		
-		System.out.println("Enter product data: ");
 		System.out.print("Name: ");
-		product.name = sc.nextLine();
-		System.out.print("Price: ");
-		product.price = sc.nextDouble();
-		System.out.print("Quantity in stock: ");
-		product.quantity = sc.nextInt();
-	
-		System.out.println();
-		System.out.println("Product data: " + product);
+		emp.name = sc.nextLine();
+		System.out.print("GrossSalary: ");
+		emp.grossSalary = sc.nextDouble();
+		System.out.print("Tax: ");
+		emp.tax = sc.nextDouble();
 		
 		System.out.println();
-		System.out.print("Enter the number of products to be added in stock: ");
-		int quantity = sc.nextInt();
-		product.addProducts(quantity);
+		System.out.println("Employee: " + emp);
+		System.out.println();
+		System.out.print("Which percentage to increase salary? ");
+		double percentage = sc.nextDouble();
+		emp.increaseSalary(percentage);
 		
 		System.out.println();
-		System.out.println("Updated data: " + product);
-		
-		System.out.println();
-		System.out.print("Enter the number of products to be removed from stock: ");
-		quantity = sc.nextInt();
-		product.removeProducts(quantity);
-		System.out.println();
-		
-		System.out.println("Updated data: " + product);
+		System.out.println("Updated data: " + emp);
 		sc.close();
-		
 	}
 	
 	public static void Membros_estaticos() {
 
-		//Membros estáticos são os métodos e atributos
+		//São membros que não precisam de objetos para serem chamdos 
+		//Exemplo, método sqrt da classe Math
+		System.out.println(Math.sqrt(25.0));
+		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
